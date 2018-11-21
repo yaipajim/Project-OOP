@@ -3,8 +3,12 @@ package com.neet.bitbeat.main;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.neet.bitbeat.handlers.Content;
 import com.neet.bitbeat.handlers.GameStateManager;
+import com.neet.bitbeat.handlers.MyInput;
+import com.neet.bitbeat.handlers.MyInputProcessor;
 
 public class Game implements ApplicationListener{
 	
@@ -22,7 +26,15 @@ public class Game implements ApplicationListener{
 	
 	private GameStateManager gsm;
 	
+	public static Content res;
+	
 	public void create() {
+		
+		Gdx.input.setInputProcessor(new MyInputProcessor());
+		
+		res = new Content();
+		res.loadTexture("res/character/character.png", "girl");
+		res.loadTexture("res/object/coin.png", "crystal");
 		
 		sb = new SpriteBatch();
 		cam = new OrthographicCamera();
@@ -41,6 +53,7 @@ public class Game implements ApplicationListener{
 			accum -= STEP;
 			gsm.update(STEP);
 			gsm.render();
+			MyInput.update();
 		}
 		
 	}
