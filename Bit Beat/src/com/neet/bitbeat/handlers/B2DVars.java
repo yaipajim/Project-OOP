@@ -9,5 +9,6 @@ public class B2DVars {
 	public static final short BIT_PLAYER = 2;
 	public static final short BIT_LINE = 4;
 	public static final short BIT_CRYSTAL = 8;
+	public static final short BIT_BODY = 16;
 	
 }

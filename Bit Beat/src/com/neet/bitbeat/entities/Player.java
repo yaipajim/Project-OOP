@@ -17,7 +17,7 @@ public class Player extends B2DSprite {
 		Texture tex = Game.res.geTexture("girl");
 		TextureRegion[] sprites = TextureRegion.split(tex, 24, 32)[0];
 		
-		setAnimation(sprites, 1 / 5f);
+		setAnimation(sprites, 1 / 9f);
 	}
 	
 	public void cellectCrystal() { numCrystals++; }

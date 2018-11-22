@@ -9,18 +9,12 @@ public class MyInputProcessor extends InputAdapter{
 		if (k == Keys.SPACE) {
 			MyInput.setKey(MyInput.BUTTON1, true);
 		}
-		if (k == Keys.X) {
-			MyInput.setKey(MyInput.BUTTON2, true);
-		}
 		return true;
 	}
 	
 	public boolean keyUp(int k) {
 		if (k == Keys.SPACE) {
 			MyInput.setKey(MyInput.BUTTON1, false);
-		}
-		if (k == Keys.X) {
-			MyInput.setKey(MyInput.BUTTON2, false);
 		}
 		return true;
 	}

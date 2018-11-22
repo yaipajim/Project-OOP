@@ -7,6 +7,7 @@ import java.util.Arrays;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g3d.environment.AmbientCubemap;
 import com.badlogic.gdx.maps.MapLayer;
@@ -60,7 +61,7 @@ public class Play extends GameState {
 		super(gsm);
 		
 		//set up box2d stuff
-		world = new World(new Vector2(0, -9.81f), true);
+		world = new World(new Vector2(0, -20f), true);
 		cl = new MyContactListener();
 		world.setContactListener(cl);
 		b2dr = new Box2DDebugRenderer();
@@ -85,7 +86,7 @@ public class Play extends GameState {
 		//player jump
 		if(MyInput.isPressed(MyInput.BUTTON1)) {
 			if (cl.isPlayerOnGround()) {
-				player.getBody().applyForceToCenter(0, 180, true);
+				player.getBody().applyForceToCenter(0, 270, true);
 			}
 		}
 		
@@ -122,6 +123,20 @@ public class Play extends GameState {
 		// clear screen
 		Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
+		//camera follow player
+		cam.position.set(
+				player.getPosition().x * PPM + Game.V_WIDTH / 4, 
+				Game.V_HEIGHT / 2,
+				0
+		);
+		sb.begin();					// #5
+		sb.draw(background, 0, 0, Game.V_WIDTH, Game.V_HEIGHT);	// #6
+		sb.end();
+		cam.update();
+		
+		//draw bg
+		
+		
 		//draw tiled map
 		tmr.setView(cam);
 		tmr.render();
@@ -134,7 +149,6 @@ public class Play extends GameState {
 		for (int i = 0; i < crystals.size; i++) {
 			crystals.get(i).render(sb);
 		}
-		
 		
 		//draw box2d (object simulator)
 		if(debug) {
@@ -152,17 +166,24 @@ public class Play extends GameState {
 		PolygonShape shape = new PolygonShape();
 		
 		// create player
-		bdef.position.set(100 / PPM, 200 / PPM);
+		bdef.position.set(180 / PPM, 300 / PPM);
 		bdef.type = BodyType.DynamicBody;
 		//Velocity -- walk speed
-		bdef.linearVelocity.set(.1f,0);
+		bdef.linearVelocity.set(1.5f, 0);
 		Body body = world.createBody(bdef);
 			
-		shape.setAsBox(13 / PPM, 13 / PPM);
+		shape.setAsBox(18 / PPM, 32 / PPM, new Vector2(0 , 20 / PPM), 0);
+		fdef.shape = shape;
+		fdef.filter.categoryBits = B2DVars.BIT_BODY;
+		fdef.filter.maskBits = B2DVars.BIT_LINE | B2DVars.BIT_CRYSTAL;
+		body.createFixture(fdef).setUserData("player");
+		
+		//create foot
+		shape.setAsBox(18 / PPM, 1 / PPM, new Vector2(0 , -12 / PPM), 0);
 		fdef.shape = shape;
 		fdef.filter.categoryBits = B2DVars.BIT_PLAYER;
 		fdef.filter.maskBits = B2DVars.BIT_LINE | B2DVars.BIT_CRYSTAL;
-		body.createFixture(fdef).setUserData("player");
+		body.createFixture(fdef).setUserData("stand");
 
 		//create foot sensor
 		shape.setAsBox(8 / PPM, 2 / PPM, new Vector2(0 , -13 / PPM), 0);
@@ -177,8 +198,8 @@ public class Play extends GameState {
 	}
 	
 	public void createTiles() {
-		// load tile map
-		tileMap = new TmxMapLoader().load("res/map/test.tmx");
+		//load tile map
+		tileMap = new TmxMapLoader().load("res/map/test2.tmx");
 		tmr = new OrthogonalTiledMapRenderer(tileMap);
 		
 		tileSize = (int) tileMap.getProperties().get("tilewidth");
@@ -207,18 +228,17 @@ public class Play extends GameState {
 				if(cell == null) continue;
 				if (cell.getTile() == null) continue;
 				
-				//create body & fixture rom cell
+				//create body & fixture from cell
 				bdef.type = BodyType.StaticBody;
 				bdef.position.set(
 						(col + 0.5f) * tileSize / PPM,
-						(row + 0.5f) * tileSize / PPM
+						(row + 0.5f) * 15 / PPM
 				);
 				
 				ChainShape cs = new ChainShape();
-				Vector2[] v = new Vector2[3];
-				v[0] = new Vector2(-tileSize / 2 / PPM, -tileSize / 2 / PPM);
+				Vector2[] v = new Vector2[2];
+				v[0] = new Vector2(tileSize / 2 / PPM, tileSize / 2 / PPM);
 				v[1] = new Vector2(-tileSize / 2 / PPM, tileSize / 2 / PPM);
-				v[2] = new Vector2(tileSize / 2 / PPM, tileSize / 2 / PPM);
 				cs.createChain(v);
 				fdef.friction = 0;
 				fdef.shape = cs;

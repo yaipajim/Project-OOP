@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="960" height="32" tilewidth="32" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="7">
+ <tileset firstgid="1" name="bar" tilewidth="32" tileheight="16" tilecount="2" columns="1">
+  <image source="bar2.png" width="32" height="32"/>
+ </tileset>
+ <layer id="1" name="line" width="960" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt3bkNADAIBDDYf+ksQBWa6GJLVzIAEk8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWz0EAAAAAAAAAAAAAOAl5pwBAABIZscXAACAVG5bAQAAkErPCwAAQJrbH0ZTnUhyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC/HE47ANE=
+  </data>
+ </layer>
+ <objectgroup id="2" name="crystals">
+  <object id="2" x="81" y="370">
+   <ellipse/>
+  </object>
+  <object id="4" x="109" y="368">
+   <ellipse/>
+  </object>
+  <object id="5" x="142" y="367">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

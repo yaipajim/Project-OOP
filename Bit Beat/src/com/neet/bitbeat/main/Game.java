@@ -13,14 +13,15 @@ import com.neet.bitbeat.handlers.MyInputProcessor;
 public class Game implements ApplicationListener{
 	
 	public static final String TITLE = "Bit Beat";
-	public static final int V_WIDTH = 320;
-	public static final int V_HEIGHT = 240;
+	public static final int V_WIDTH = 640;
+	public static final int V_HEIGHT = 480;
 	public static final int SCALE = 2;
 	
 	public static final float STEP = 1 / 60f;
 	private float accum;
 	
 	private SpriteBatch sb;
+	private Texture bg;
 	private OrthographicCamera cam;
 	private OrthographicCamera hudCam;
 	
@@ -35,7 +36,9 @@ public class Game implements ApplicationListener{
 		res = new Content();
 		res.loadTexture("res/character/character.png", "girl");
 		res.loadTexture("res/object/coin.png", "crystal");
-		
+		res.loadTexture("res/object/number.png", "hub");
+		res.loadTexture("res/map/bg.jpg", "bg");
+
 		sb = new SpriteBatch();
 		cam = new OrthographicCamera();
 		cam.setToOrtho(false, V_WIDTH, V_HEIGHT);
