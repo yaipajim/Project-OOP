@@ -7,15 +7,15 @@ import com.neet.bitbeat.main.Game;
 
 public class Player extends B2DSprite {
 	
-	private int numCrystals;
+	private int numCrystals = 0;
 	private int totalCrystals;
 	
-	public Player(Body body) {
+	public Player(Body body, int i) {
 		
 		super(body);
 		
-		Texture tex = Game.res.geTexture("girl");
-		TextureRegion[] sprites = TextureRegion.split(tex, 24, 32)[0];
+		Texture tex = Game.res.geTexture("easy1");
+		TextureRegion[] sprites = TextureRegion.split(tex, 32, 32)[0];
 		
 		setAnimation(sprites, 1 / 9f);
 	}

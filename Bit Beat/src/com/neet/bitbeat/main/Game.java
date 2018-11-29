@@ -17,7 +17,7 @@ public class Game implements ApplicationListener{
 	public static final int V_HEIGHT = 480;
 	public static final int SCALE = 2;
 	
-	public static final float STEP = 1 / 60f;
+	public static final float STEP = 1 / 120f;
 	private float accum;
 	
 	private SpriteBatch sb;
@@ -31,13 +31,16 @@ public class Game implements ApplicationListener{
 	
 	public void create() {
 		
+		Gdx.graphics.setVSync(true);
 		Gdx.input.setInputProcessor(new MyInputProcessor());
 		
 		res = new Content();
-		res.loadTexture("res/character/character.png", "girl");
+		res.loadTexture("res/character/character4.png", "normal1");
+		res.loadTexture("res/character/character3.png", "easy1");
 		res.loadTexture("res/object/coin.png", "crystal");
 		res.loadTexture("res/object/number.png", "hub");
-		res.loadTexture("res/map/bg.jpg", "bg");
+		res.loadTexture("res/map/start.png", "start");
+		res.loadTexture("res/map/op2.png", "bitbeat");
 
 		sb = new SpriteBatch();
 		cam = new OrthographicCamera();

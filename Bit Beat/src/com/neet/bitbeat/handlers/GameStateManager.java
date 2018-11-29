@@ -11,7 +11,7 @@ public class GameStateManager {
 	
 	private Stack<GameState> gameStates;
 	
-	public static final int PLAY = 912837;
+	public static int PLAY = 0;
 	
 	public GameStateManager(Game game) {
 		this.game = game;
@@ -30,7 +30,9 @@ public class GameStateManager {
 	}
 	
 	private GameState getState(int state) {
-		if (state == PLAY) return new Play(this);
+		if (state == PLAY) {
+			return new Play(this);
+		}
 		return null;
 	}
 	

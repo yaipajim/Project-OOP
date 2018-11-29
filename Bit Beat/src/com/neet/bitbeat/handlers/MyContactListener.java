@@ -35,12 +35,6 @@ public class MyContactListener implements ContactListener{
 		if (fb.getUserData() != null && fb.getUserData().equals("foot")) {
 			numFootContacts++;
 		}
-		if (fa.getUserData() != null && fa.getUserData().equals("bar")) {
-			numFootContacts++;
-		}
-		if (fb.getUserData() != null && fb.getUserData().equals("bar")) {
-			numFootContacts++;
-		}
 		if (fa.getUserData() != null && fa.getUserData().equals("crystal")) {
 			System.out.println("remove crystal");
 			bodiesToRemove.add(fa.getBody());
