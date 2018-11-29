@@ -21,7 +21,7 @@ public abstract class GameState {
 	protected SpriteBatch sb;
 	protected OrthographicCamera cam;
 	protected OrthographicCamera hudCam;
-	protected Music levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Eye Of the Tiger.mp3"));
+	protected Music levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
 	protected int currentSong = 0;
 	protected TiledMap tileMap;
 	
@@ -54,10 +54,10 @@ public abstract class GameState {
         //load the appropriate file
 		switch (i){
 			case 0:
-				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Eye Of the Tiger.mp3"));
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
 				break;
 			case 1:
-				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Eye Of the Tiger.mp3"));
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
 				break;
 			case 6:
 				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Very.mp3"));
@@ -68,7 +68,7 @@ public abstract class GameState {
 			case 8:
 				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Silence.mp3"));
 		}
-		levelSong.setVolume(0.3f);
+		levelSong.setVolume(0.5f);
 
         //remember the song we loaded
 		currentSong = i;

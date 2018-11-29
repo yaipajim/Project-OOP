@@ -78,7 +78,7 @@ public class Play extends GameState {
 		//create bitbeat
 		createBitbeat();
 		
-		levelSong.setVolume(0.3f);
+		levelSong.setVolume(0.5f);
 		levelSong.setLooping(true);
 		playMusic();
 		
