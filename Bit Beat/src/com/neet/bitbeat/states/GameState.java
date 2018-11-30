@@ -59,11 +59,17 @@ public abstract class GameState {
 			case 1:
 				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
 				break;
+			case 2:
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
+				break;
+			case 5:
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Intro.mp3"));
+				break;
 			case 6:
-				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Very.mp3"));
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/4walls.mp3"));
 				break;
 			case 7:
-				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/4walls.mp3"));
+				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Very.mp3"));
 				break;
 			case 8:
 				levelSong = Gdx.audio.newMusic(Gdx.files.internal("res/music/Silence.mp3"));
@@ -83,37 +89,42 @@ public abstract class GameState {
 		switch (gsm.PLAY){
 			case 0:
 				background = new Texture("res/map/itf.jpg");
-				background2 = new Texture("res/map/itf.jpg");
-				background3 = new Texture("res/map/itf.jpg");
-				tileMap = new TmxMapLoader().load("res/map/itf.tmx");
 				break;
 			case 1:
 				background = new Texture("res/map/itf.jpg");
-				background2 = new Texture("res/map/itf.jpg");
-				background3 = new Texture("res/map/itf.jpg");
-				tileMap = new TmxMapLoader().load("res/map/itf.tmx");
 				break;
 			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-				background = new Texture("res/map/normal1.jpg");
-				background2 = new Texture("res/map/normal2.jpg");
-				background3 = new Texture("res/map/normal3.jpg");
-				tileMap = new TmxMapLoader().load("res/map/normal1.tmx");
+				background = new Texture("res/map/select.jpg");
 				break;
-			case 7:
+			case 3:
+				background = new Texture("res/map/credits.jpg");
+				break;
+			case 4:
+				background = new Texture("res/map/credits.jpg");
+				break;
+			case 5:
+				background = new Texture("res/map/select.jpg");
+				break;
+			case 6:
 				background = new Texture("res/map/easy1.jpg");
 				background2 = new Texture("res/map/easy2.jpg");
 				background3 = new Texture("res/map/easy3.jpg");
 				tileMap = new TmxMapLoader().load("res/map/easy1.tmx");
 				break;
+			case 7:
+				background = new Texture("res/map/normal1.jpg");
+				background2 = new Texture("res/map/normal2.jpg");
+				background3 = new Texture("res/map/normal3.jpg");
+				tileMap = new TmxMapLoader().load("res/map/normal1.tmx");
+				break;
 			case 8:
-				background = new Texture("res/map/6-1.jpg");
-				background2 = new Texture("res/map/6-2.jpg");
-				background3 = new Texture("res/map/6-3.jpg");
-				tileMap = new TmxMapLoader().load("res/map/hard1.tmx");
+				background = new Texture("res/map/hard1.jpg");
+				background2 = new Texture("res/map/hard2.jpg");
+				background3 = new Texture("res/map/hard3.jpg");
+				tileMap = new TmxMapLoader().load("res/map/normal1.tmx");
+				break;
+			default:
+				background = new Texture("res/map/itf.jpg");
 				break;
 		}
 	}

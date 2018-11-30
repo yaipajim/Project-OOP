@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="960" height="64" tilewidth="32" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="2">
- <tileset firstgid="1" source="bar.tsx"/>
- <layer id="5" name="line" width="960" height="64">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="400" height="32" tilewidth="32" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="4">
+ <tileset firstgid="1" source="bar5.3.tsx"/>
+ <tileset firstgid="3" source="bar5.tsx"/>
+ <tileset firstgid="5" source="bar5.1.tsx"/>
+ <tileset firstgid="7" source="bar5.2.tsx"/>
+ <layer id="1" name="line" width="400" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwwEJAAAIA7Dbv7QBXkBwgyUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABw16iqquqDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAWwO+A8E=
+   eJzt24tu6yAMgOFWVbX3f+OtUqtljIttDJjk/6TqLEmXECAGnJ3bDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjj8f7gP+omtlb7HI8/MvtGXRc4m+fP517ZvurzIIkxq+umFq9yZV1dXi1tmVv3LDmfpZ4s/WLH9sB19TxbV+rn6fjZIq0bTazvua6mnaO2q6TMpX8l57OUQfsdTftgb625Zm7fK858vT+aeDNaaz2hjY8fO/Xz4z1a2lZLE7t61wSeY1DrnLNFnJNbxqvj70riRMT7btmxzN4862B1Xc7IV+TOp7lObe5b2h49z/SSK78l1l9xDUgsiuVMedE05nisE0bd84q6tK4nemnzX7ljn7a5F7alVtVBylr+mpXP5uj+HCn2RCpLzchy1t59tq4brf6ilUejZz4uXR+vqh/remNmWXbuOx+Rxo10XEznZul+yfFR96c9dy2/OOqaFqvqzFKfveXw+Oxu1FgdZb3h9V0tzRz/DP1opp2evdb6t2e+bO3nHvU3Mz80Kpak5ZVs79LvVuqpJ+rYZubzuELvXCTi34Ac5dblPe0p/X7P/E+SV/C+L83fycx4Blq56RG53rOytNcOz/ZOrLndEc/aqHnqzOvvxnLPO8yTNf9/K8p7QshE7G/4pXnWPMYbj7VQT97lav3RIx8edZ6sGQuu1u4vuXdvubVez8+Sbc0+yTHEpo3/pWPH9WMr/kjzKda8C/3xPFhDxNAaN3Lzjty+4+/RttfjFZtL57HmPu83+qOFd17RC20JoIXY/1drzlbaLpGM05b4XytD+i5T826TfgAA/TS55+O4U8sllGK4Jl/Ym8fOfY9xAwD2lq5JSu9Rva7FuyoAAAAAAABgD99bywd4
   </data>
  </layer>
- <objectgroup id="4" name="crystals">
-  <object id="1" x="228" y="862.667">
+ <objectgroup id="2" name="coins">
+  <object id="1" x="459" y="307">
+   <ellipse/>
+  </object>
+  <object id="2" x="403" y="308">
+   <ellipse/>
+  </object>
+  <object id="3" x="622" y="269">
    <ellipse/>
   </object>
  </objectgroup>

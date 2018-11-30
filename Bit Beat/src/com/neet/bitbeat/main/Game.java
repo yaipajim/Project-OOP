@@ -37,10 +37,19 @@ public class Game implements ApplicationListener{
 		res = new Content();
 		res.loadTexture("res/character/character4.png", "normal1");
 		res.loadTexture("res/character/character3.png", "easy1");
-		res.loadTexture("res/object/coin.png", "crystal");
+		res.loadTexture("res/object/coin.png", "coin");
 		res.loadTexture("res/object/number.png", "hub");
 		res.loadTexture("res/map/start.png", "start");
 		res.loadTexture("res/map/op2.png", "bitbeat");
+		res.loadTexture("res/map/new.png", "button1");
+		res.loadTexture("res/map/rank.png", "button2");
+		res.loadTexture("res/map/credits.png", "button3");
+		res.loadTexture("res/map/exit.png", "button4");
+		res.loadTexture("res/map/easy.png", "button5");
+		res.loadTexture("res/map/normal.png", "button6");
+		res.loadTexture("res/map/hard.png", "button7");
+		res.loadTexture("res/map/pointer.png", "pointer");
+		res.loadTexture("res/map/pointer2.png", "pointer2");
 
 		sb = new SpriteBatch();
 		cam = new OrthographicCamera();

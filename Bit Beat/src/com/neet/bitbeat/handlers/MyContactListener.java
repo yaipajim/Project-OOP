@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.utils.Array;
-import com.neet.bitbeat.entities.Crystal;
+import com.neet.bitbeat.entities.Coin;
 
 public class MyContactListener implements ContactListener{
 	
@@ -35,11 +35,11 @@ public class MyContactListener implements ContactListener{
 		if (fb.getUserData() != null && fb.getUserData().equals("foot")) {
 			numFootContacts++;
 		}
-		if (fa.getUserData() != null && fa.getUserData().equals("crystal")) {
-			System.out.println("remove crystal");
+		if (fa.getUserData() != null && fa.getUserData().equals("coin")) {
+			System.out.println("remove coin");
 			bodiesToRemove.add(fa.getBody());
 		}
-		if (fb.getUserData() != null && fb.getUserData().equals("crystal")) {
+		if (fb.getUserData() != null && fb.getUserData().equals("coin")) {
 			bodiesToRemove.add(fb.getBody());
 		}
 		
