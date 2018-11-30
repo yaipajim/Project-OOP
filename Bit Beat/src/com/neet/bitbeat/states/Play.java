@@ -213,6 +213,18 @@ public class Play extends GameState {
 				setState();
 				Play(gsm);
 			}
+		} else if (gsm.PLAY == 3) {
+			if(MyInput.isPressed(MyInput.BUTTON4)) {
+				gsm.PLAY = 1;
+				setState();
+				Play(gsm);
+			}
+		} else if (gsm.PLAY == 4) {
+			if(MyInput.isPressed(MyInput.BUTTON4)) {
+				gsm.PLAY = 1;
+				setState();
+				Play(gsm);
+			}
 		}
 	}
 	

@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="400" height="32" tilewidth="32" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="4">
- <tileset firstgid="1" source="bar5.3.tsx"/>
- <tileset firstgid="3" source="bar5.tsx"/>
- <tileset firstgid="5" source="bar5.1.tsx"/>
- <tileset firstgid="7" source="bar5.2.tsx"/>
- <layer id="1" name="line" width="400" height="32">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="400" height="32" tilewidth="32" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="../../Desktop/bar2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="400" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt24tu6yAMgOFWVbX3f+OtUqtljIttDJjk/6TqLEmXECAGnJ3bDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjj8f7gP+omtlb7HI8/MvtGXRc4m+fP517ZvurzIIkxq+umFq9yZV1dXi1tmVv3LDmfpZ4s/WLH9sB19TxbV+rn6fjZIq0bTazvua6mnaO2q6TMpX8l57OUQfsdTftgb625Zm7fK858vT+aeDNaaz2hjY8fO/Xz4z1a2lZLE7t61wSeY1DrnLNFnJNbxqvj70riRMT7btmxzN4862B1Xc7IV+TOp7lObe5b2h49z/SSK78l1l9xDUgsiuVMedE05nisE0bd84q6tK4nemnzX7ljn7a5F7alVtVBylr+mpXP5uj+HCn2RCpLzchy1t59tq4brf6ilUejZz4uXR+vqh/remNmWXbuOx+Rxo10XEznZul+yfFR96c9dy2/OOqaFqvqzFKfveXw+Oxu1FgdZb3h9V0tzRz/DP1opp2evdb6t2e+bO3nHvU3Mz80Kpak5ZVs79LvVuqpJ+rYZubzuELvXCTi34Ac5dblPe0p/X7P/E+SV/C+L83fycx4Blq56RG53rOytNcOz/ZOrLndEc/aqHnqzOvvxnLPO8yTNf9/K8p7QshE7G/4pXnWPMYbj7VQT97lav3RIx8edZ6sGQuu1u4vuXdvubVez8+Sbc0+yTHEpo3/pWPH9WMr/kjzKda8C/3xPFhDxNAaN3Lzjty+4+/RttfjFZtL57HmPu83+qOFd17RC20JoIXY/1drzlbaLpGM05b4XytD+i5T826TfgAA/TS55+O4U8sllGK4Jl/Ym8fOfY9xAwD2lq5JSu9Rva7FuyoAAAAAAABgD99bywd4
+   eJzt2ItuwyAMQNH0/396qrRJWwf4gQ0muUeqtjxKKDiAuS4AAAAAAAAAAAAAAAAAAAAAAAAAAABU8fr+4D/apjapf35ffzXOZT0XuJvPmG8dP5FmjNndNqPxSurXE1jrrIllqTxPO3ni4sT+wHPNvFtPinPPmDVbrnfM0pQ1Oq7ar5o69/5qyvPUwXqPpX9wNmmt2Tv3unyxmSliDdYr9xStfroM5zzP09Tl897MeSOizNWqvUtvnvnq93c140TF3y05sc7RIttgd1uu2K9olWd5zmjt2zvOXmdGadXfM148MQdkLKrFErvV+252Ldma/7N+84623NV/ljjqXev1i2dNXiGGM/LRnb8ru12r9NtbpbqMZNZzJleu1n7V6mMxsx7X5sdV5o2oeyPrcnLs/Kg0b7Tmeem85nsZrGWPxsysZ3rsajNPe87WI+Jzuqy5+unzhiVG7hBHK5307kn578x62RvnEe2XUab2WZHlWo9PibudTpw3TrfyfdwhIqYqt4mUu8zmG9JzPWVIOVnvb+TviswpPFq55+gYfZ52OuHdPslon2L1u5a1Tl35/NN438HZMrJp8rDeNdRGf9Vmedci5puIXGhm3+Vp8Rix/qq6hrPUqWL9s/Xyncj/NceWc5prqM06/o+uaXNITaxoY6p1D/F4H/RlDdp5RHuuVQbuL6rPe+Ww97lW9L5iFPoSgISx/y9pzdY7lsobnfe0uyY37X0s5QIA7CzziDRWS2O4Zb9wdh/buj8OAKjvMyfJ3Ksm7wQAAAAAAAAAAAAAAAAAAACwyxc/hQJO
   </data>
  </layer>
- <objectgroup id="2" name="coins">
-  <object id="1" x="459" y="307">
-   <ellipse/>
-  </object>
-  <object id="2" x="403" y="308">
-   <ellipse/>
-  </object>
-  <object id="3" x="622" y="269">
-   <ellipse/>
-  </object>
- </objectgroup>
 </map>
