@@ -1,6 +1,6 @@
 # Bit Beat
 
-Project นี้เป็นส่วนหนึ่งของรายวิชา Object-Oriented Programming
+Project นี้เป็นส่วนหนึ่งของรายวิชา Object-Oriented Programming </br>
 Faculty of Information Technology, KMITL
 
 ## Get to know
